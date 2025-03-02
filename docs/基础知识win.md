@@ -122,9 +122,25 @@ python test.py
 ## 2.4 API 密钥
 
 ### X API（Twitter）
-- **申请**：[Twitter Developer](https://developer.twitter.com/)
-- **获取**：API Key、Secret、Bearer Token。
-- **保存**：放入 `meme-coin-backend/.env` 文件（需安装 `pip install python-dotenv`）。
+1. **申请**：[Twitter Developer](https://developer.twitter.com/)
+2. **创建开发者账户**，选择 `Hobbyist` 或 `Business`，填写用途。
+3. **创建项目**，如 `MemeCoinSentiment`，选择 `Exploring the API`。
+4. **创建 Twitter 应用**，命名 `MemeCoinAnalysis`。
+5. **获取 API Key、Secret、Bearer Token**：
+   - 进入 **Developer Portal** > **Projects & Apps**。
+   - 选择你的应用，进入 **Keys and Tokens** 选项卡。
+   - 生成 `API Key`、`API Secret` 和 `Bearer Token`。
+6. **保存 API 密钥**
+   在 `meme-coin-backend/.env` 文件中添加：
+   ```env
+   TWITTER_API_KEY=your_api_key
+   TWITTER_API_SECRET=your_api_secret
+   TWITTER_BEARER_TOKEN=your_bearer_token
+   ```
+7. **安装 `python-dotenv` 以加载环境变量**：
+   ```cmd
+   pip install python-dotenv
+   ```
 
 ### CoinGecko API
 无需密钥，直接使用。
